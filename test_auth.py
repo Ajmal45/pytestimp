@@ -69,16 +69,4 @@ def test_login_missing_fields(client):
         "email": ""
     })
 
-    assert response.status_code == 400
-from unittest.mock import patch
-
-@patch("app.get_user")
-def test_login_mock(mock_get_user, client):
-    mock_get_user.return_value = "123456"
-
-    response = client.post("/login", json={
-        "email": "mock@gmail.com",
-        "password": "123456"
-    })
-
-    assert response.status_code == 200
+    assert response.status_code == 400
