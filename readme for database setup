@@ -1,0 +1,12 @@
+# Staff Authentication System
+
+## Database Setup
+This project uses **MongoDB**. 
+1. Install MongoDB Community Server and MongoDB Compass.
+2. Create a database named `Redblox_Local_DB`.
+3. Create a collection named `Staff_Members`.
+4. The Flask backend will automatically handle user registration and hashing.
+
+## How to Run
+1. **Backend:** Run `python app.py`
+2. **Frontend:** Navigate to `/frontend` and run `npm start`
