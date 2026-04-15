@@ -1,38 +1,91 @@
+/* --- Global & Container Styles --- */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.auth-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --- Form & Layout --- */
+.auth-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 1. The Wrapper: The 'fence' for input + icon */
+.input-group {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px; /* Slightly wider for better look */
+  margin: 10px auto;
+}
+
+/* 2. The Input: The box itself */
+.auth-input {
+  width: 100%;
+  padding: 12px 40px 12px 12px !important; /* Space on right for icon */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box; /* Essential! */
+  transition: border-color 0.3s;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* 3. The Icon: Pinned to the right side inside the box */
+.input-icon-right {
+  position: absolute;
+  right: 12px; 
+  color: #888;
+  pointer-events: none; 
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+/* --- Button & Links --- */
+.auth-btn {
+  padding: 12px 20px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 300px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.auth-btn:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.auth-link {
+  cursor: pointer;
+  color: #007bff;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+  .auth-container {
+    margin-top: 20px;
+    padding: 15px;
   }
 }
